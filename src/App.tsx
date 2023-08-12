@@ -89,25 +89,25 @@ export default function App() {
           <div className={`${styles.layoutContainer} grid`}>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={monstera} alt="monstera" />
-              <button className="hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={rubberfig} alt="rubberfig" />
-              <button className="hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={snakeplant} alt="snakeplant" />
-              <button className="hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={rattlesnake} alt="rattlesnake" />
-              <button className="hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
@@ -120,7 +120,6 @@ export default function App() {
             <img src={signup} alt="storefront with plants outside" />
           </div>
           <div>
-            {' '}
             <h3>Lorem, ipsum.</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
