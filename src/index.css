@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: auto;
+}
+
+.showcase,
+.overlay {
+  height: 46.875rem;
+}
+
+.showcase {
+  background: url(./assets/hero.webp) center/cover;
+}

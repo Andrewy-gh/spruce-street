@@ -1,0 +1,40 @@
+.layoutContainer {
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'monstera'
+    'rubber-fig'
+    'snake-plant'
+    'rattlesnake-plant';
+}
+
+@media (min-width: 768px) {
+  .layoutContainer {
+    grid-template-areas:
+      'monstera rubber-fig'
+      'snake-plant rattlesnake-plant';
+  }
+}
+
+@media (min-width: 1024px) {
+  .layoutContainer {
+    grid-template-areas:
+      'rubber-fig monstera monstera monstera '
+      'snake-plant monstera monstera monstera '
+      'rattlesnake-plant monstera monstera monstera ';
+  }
+}
+
+.layoutItem:nth-child(1) {
+  grid-area: monstera;
+  max-height: 100%;
+}
+.layoutItem:nth-child(2) {
+  grid-area: rubber-fig;
+}
+.layoutItem:nth-child(3) {
+  grid-area: snake-plant;
+}
+.layoutItem:nth-child(4) {
+  grid-area: rattlesnake-plant;
+}
