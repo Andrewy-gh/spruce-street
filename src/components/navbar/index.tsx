@@ -1,5 +1,11 @@
 import NavBarDesktop from './NavBarDesktop';
+import NavBarMobile from './NavBarMobile';
 
 export default function Navbar() {
-  return <NavBarDesktop />;
+  return (
+    <nav>
+      <NavBarDesktop />
+      <NavBarMobile />
+    </nav>
+  );
 }
