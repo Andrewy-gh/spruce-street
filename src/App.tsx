@@ -10,6 +10,7 @@ import rattlesnake from './assets/rattlesnake.webp';
 import signup from './assets/signup.webp';
 import styles from './Bestsellers.module.css';
 import NavBar from './components/navbar/index';
+import Footer from './components/footer/index';
 
 export default function App() {
   return (
@@ -138,7 +139,7 @@ export default function App() {
           </div>
         </section>
       </main>
-      <footer>Footer here</footer>
+      <Footer />
     </>
   );
 }
