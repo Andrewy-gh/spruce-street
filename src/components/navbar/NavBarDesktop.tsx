@@ -1,6 +1,6 @@
 export default function NavBarDesktop() {
   return (
-    <div className="hidden md:grid grid-cols-3 bg-dark-secondary py-6">
+    <div className="hidden lg:grid grid-cols-3 bg-dark-secondary py-6">
       <div className="place-self-start">Logo</div>
       <div className="place-self-center flex">
         <div className="relative inline-block group">
