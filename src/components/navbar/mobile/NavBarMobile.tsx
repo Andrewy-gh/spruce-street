@@ -1,9 +1,9 @@
 import MenuMobile from './MenuMobile';
 export default function NavBarMobile() {
   return (
-    <div className="md:hidden flex justify-between bg-dark-secondary py-6">
+    <div className="md:hidden flex justify-between bg-dark-secondary">
       <MenuMobile />
-      <div>Logo</div>
+      <div className="p-2">Logo</div>
     </div>
   );
 }

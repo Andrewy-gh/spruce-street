@@ -1,42 +1,56 @@
-import { Disclosure, Transition } from '@headlessui/react';
+import { useState } from 'react';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 
 export default function MenuMobile() {
+  const [open, setOpen] = useState(false);
   return (
-    <Disclosure as="div">
-      {({ open }) => (
-        <div>
-          <Disclosure.Button className="px-2">
-            <span className="sr-only">Open main menu</span>
-            {open ? (
-              <XMarkIcon
-                className="block h-6 w-6 fill-light-text dark:fill-dark-text"
-                aria-hidden="true"
-              />
-            ) : (
-              <Bars3Icon
-                className="block h-6 w-6 fill-light-text dark:fill-dark-text"
-                aria-hidden="true"
-              />
-            )}
-          </Disclosure.Button>
-          <Transition
-            className="overflow-hidden"
-            enter="transition-all linear duration-[900ms]"
-            enterFrom="transform max-h-0"
-            enterTo="absolute z-10 transform w-screen max-h-screen bg-slate-600"
-            leave="transition-all linear duration-[900ms]"
-            leaveFrom="absolute z-10 transform  w-screen max-h-screen bg-slate-600"
-            leaveTo="absolute z-10 transform w-screen max-h-0 bg-slate-600"
-          >
-            <Disclosure.Panel>
-              <div className="space-y-1 h-screen px-2 pb-3 pt-2 bg-light-background dark:bg-dark-background">
-                <div>Menu Options</div>
-              </div>
-            </Disclosure.Panel>
-          </Transition>
+    <>
+      <div className="text-[40px] cursor-pointer p-2">
+        <Bars3Icon
+          className="block h-6 w-6 fill-light-text dark:fill-dark-text"
+          aria-hidden="true"
+          onClick={() => setOpen(true)}
+        />
+      </div>
+      {/* Main Menu */}
+      <div
+        className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col  items-center gap-[15vw] text-[40px] tracking-[1px] overflow-hidden origin-left duration-500 ${
+          open ? 'w-[100vw]' : ''
+        }`}
+        // className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex justify-center items-center text-[40px] tracking-[1px] overflow-hidden orgin-left duration-500 ${
+        //   open ? 'w-[100vw]' : ''
+        // }`}
+      >
+        {/* Close Button */}
+        <div
+          // className="absolute top-[40px] left-[100px] text-[40px] cursor-pointer"
+          className="self-start p-2"
+          onClick={() => setOpen(false)}
+        >
+          <XMarkIcon
+            className="block h-6 w-6 fill-light-text dark:fill-dark-text"
+            aria-hidden="true"
+          />
         </div>
-      )}
-    </Disclosure>
+        <ul>
+          {/* hover:textShadow duration-500 hover:translate-y-[-5px] */}
+          <li className="hover:translate-y-[-5px]">
+            <a href="#">Home</a>
+          </li>
+          <li className="hover:translate-y-[-5px]">
+            <a href="#">Porfolio</a>
+          </li>
+          <li className="hover:translate-y-[-5px]">
+            <a href="#">Services</a>
+          </li>
+          <li className="hover:translate-y-[-5px]">
+            <a href="#">Contact</a>
+          </li>
+          <li className="hover:translate-y-[-5px]">
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 }
