@@ -27,7 +27,7 @@
 
 .layoutItem:nth-child(1) {
   grid-area: monstera;
-  max-height: 100%;
+  height: 100%;
 }
 .layoutItem:nth-child(2) {
   grid-area: rubber-fig;

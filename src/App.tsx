@@ -1,7 +1,3 @@
-import hero from './assets/hero.jpg';
-import featured1 from './assets/featured-1.webp';
-import featured2 from './assets/featured-2.webp';
-import featured3 from './assets/featured-3.webp';
 import plants480 from './assets/plants-480.mp4';
 import monstera from './assets/monstera.webp';
 import rubberfig from './assets/rubberfig.webp';
@@ -10,6 +6,7 @@ import rattlesnake from './assets/rattlesnake.webp';
 import signup from './assets/signup.webp';
 import styles from './Bestsellers.module.css';
 import NavBar from './components/navbar/index';
+import Featured from './components/featured';
 import Footer from './components/footer/index';
 
 export default function App() {
@@ -22,15 +19,17 @@ export default function App() {
         {/* Overlay */}
         <div className="showcase">
           <div className="overlay">
-            <section className="grid h-full mx-auto">
+            <section className="grid h-full w-container mx-auto">
               {/* Fix */}
-              <div className="text-light self-center justify-self-center">
-                <h1>Welcome</h1>
-                <p>
+              <div className="text-light self-center justify-self-start">
+                <h1 className="font-accent text-step-5 text-light font-bold ">
+                  Welcome
+                </h1>
+                <p className="font-body text-step-0 text-light mb-space-xs">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Itaque, quod?
                 </p>
-                <button className="py-2 px-5 rounded-md bg-accent text-light">
+                <button className="font-accent py-space-2xs px-space-m rounded-md bg-accent text-light">
                   Shop now
                 </button>
               </div>
@@ -39,43 +38,27 @@ export default function App() {
         </div>
 
         {/* Featured */}
-        <section className="container mx-auto">
-          <h2>Featured Collections</h2>
-          <div className="flex flex-wrap gap-6 mx-auto">
-            <div className="mx-auto">
-              <img src={featured1} alt="placeholder" className="aspect-[3/5]" />
-              <p>Succulents</p>
-            </div>
-            <div className="mx-auto">
-              <img src={featured2} alt="placeholder" className="aspect-[3/5]" />
-              <p>Planters</p>
-            </div>
-            <div className="mx-auto">
-              <img src={featured3} alt="placeholder" className="aspect-[3/5]" />
-              <p>Placeholder</p>
-            </div>
-          </div>
-        </section>
+        <Featured />
 
         {/* Call to action */}
-        <section className="container mx-auto">
-          <h2 className="text-dark text-center">
+        <section className="w-container mx-auto my-space-2xl">
+          <h4 className="text-step-2 font-medium font-accent text-dark text-center p-8">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem eum
             illo quae non esse tempora impedit perspiciatis animi corporis
             corrupti?
-          </h2>
+          </h4>
         </section>
 
         {/* Video */}
-        <section className="container mx-auto">
+        <section className="w-container mx-auto my-space-l grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center gap-space-s">
           <div>
             <video autoPlay loop>
               <source src={plants480} type="video/mp4" />
             </video>
           </div>
           <div>
-            <h3>Lorem, ipsum.</h3>
-            <p>
+            <h3 className="text-step-3 font-accent">Lorem, ipsum.</h3>
+            <p className="text-step--1 font-body">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
               aliquid fuga quos asperiores exercitationem obcaecati dolorem
               mollitia ad tempora voluptatibus.
@@ -84,30 +67,30 @@ export default function App() {
         </section>
 
         {/* Best sellers */}
-        <section className="container mx-auto">
-          <h3>Best Sellers</h3>
+        <section className="w-container mx-auto my-space-xl">
+          <h3 className="text-step-3 font-accent mb-space-2xs">Best Sellers</h3>
           <div className={`${styles.layoutContainer} grid`}>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={monstera} alt="monstera" />
-              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="font-accent md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-space-2xs px-space-m rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={rubberfig} alt="rubberfig" />
-              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="font-accent md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-space-2xs px-space-m rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={snakeplant} alt="snakeplant" />
-              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="font-accent md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-space-2xs px-space-m rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
             <div className={`${styles.layoutItem} relative group`}>
               <img src={rattlesnake} alt="rattlesnake" />
-              <button className="md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-2 px-6 rounded-md bg-accent text-light font-bold">
+              <button className="font-accent md:hidden absolute bottom-5 left-4 z-10 group-hover:inline-block py-space-2xs px-space-m rounded-md bg-accent text-light font-bold">
                 View Details
               </button>
             </div>
@@ -115,26 +98,28 @@ export default function App() {
         </section>
 
         {/* Sign up */}
-        <section className="container mx-auto grid grid-cols-[auto_auto]">
-          <div>
+        <section className="w-container mx-auto my-space-xl flex flex-wrap flex-row-reverse lg:flex-row">
+          <div className="basis-full lg:basis-[60%] ">
             <img src={signup} alt="storefront with plants outside" />
           </div>
-          <div>
-            <h3>Lorem, ipsum.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, assumenda? Pariatur aliquam est aut cum!
-            </p>
-            <form action="">
-              <input
-                className="py-2 px-5 rounded-md text-accent"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <button className="py-2 px-5 rounded-md bg-accent text-light">
-                Sign up!
-              </button>
-            </form>
+          <div className="basis-full lg:basis-[40%] grid place-items-start lg:place-items-center pt-space-s lg:pl-space-s lg:pt-0">
+            <div>
+              <h3 className="text-step-3 font-accent">Lorem, ipsum.</h3>
+              <p className="text-step--1 font-body mb-space-xs">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, assumenda? Pariatur aliquam est aut cum!
+              </p>
+              <form action="">
+                <input
+                  className="font-body py-space-2xs px-space-m mr-space-2xs rounded-md text-accent font-bold"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+                <button className="font-accent py-space-2xs px-space-m rounded-md bg-accent text-light">
+                  Sign up!
+                </button>
+              </form>
+            </div>
           </div>
         </section>
       </main>

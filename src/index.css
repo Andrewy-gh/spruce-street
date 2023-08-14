@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #f5fbf1;
+  line-height: 1.6;
+}
 
 img {
   display: block;
@@ -17,4 +23,28 @@ img {
 
 .showcase {
   background: url(./assets/hero.webp) center/cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
+  -webkit-box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
+  -moz-box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
+}
+
+button:hover {
+  background-color: #2a2a5e;
+}
+
+input {
+  box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
+  -webkit-box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
+  -moz-box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
+}
+
+input:focus {
+  outline: solid #9999cc;
 }

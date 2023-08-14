@@ -16,8 +16,8 @@ export default function Accordion({ header, body }: AccordionProps) {
 
   return (
     <>
-      <div className="flex gap-4 justify-between">
-        <div>{header}</div>
+      <div className="flex gap-space-s justify-between">
+        <div className="text-step-2 font-accent">{header}</div>
         <div
           className="flex self-center mt-1.5"
           onClick={() => setExpand((expand) => !expand)}
@@ -29,16 +29,14 @@ export default function Accordion({ header, body }: AccordionProps) {
           />
         </div>
       </div>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-out ${
-          expand ? '' : 'max-h-0'
-        }`}
-      >
-        <div className="mb-4">
+      <div className={`overflow-hidden ${expand ? '' : 'max-h-0'}`}>
+        <ul className="mb-4">
           {body.map((item) => (
-            <div key={item.id}>{item.name}</div>
+            <li key={item.id} className="font-body text-step-0">
+              {item.name}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </>
   );
