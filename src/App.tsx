@@ -4,10 +4,10 @@ import rubberfig from './assets/rubberfig.webp';
 import snakeplant from './assets/snakeplant.webp';
 import rattlesnake from './assets/rattlesnake.webp';
 import signup from './assets/signup.webp';
-import styles from './Bestsellers.module.css';
 import NavBar from './components/navbar/index';
 import Featured from './components/featured';
-import Footer from './components/footer/index';
+import Footer from './components/Footer';
+import styles from './Bestsellers.module.css';
 export default function App() {
   return (
     <>

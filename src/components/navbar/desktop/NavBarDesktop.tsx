@@ -3,7 +3,7 @@ import {
   ShoppingBagIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import MenuItem from './MenuItem';
+import MenuItem from './MenuItemDesktop';
 
 const bodyItems = [
   { id: 1, name: 'Lorem' },
@@ -23,9 +23,6 @@ export default function NavBarDesktop() {
         <MenuItem header={'Care'} body={bodyItems} />
       </div>
       <div className="align-self-center justify-self-end flex gap-space-xs">
-        {/* <span>Search</span>
-        <span>User</span>
-        <span>Cart</span> */}
         <MagnifyingGlassIcon className="text-light h-6 w-6 cursor-pointer" />
         <ShoppingBagIcon className="text-light h-6 w-6 cursor-pointer" />
         <UserCircleIcon className="text-light h-6 w-6 cursor-pointer" />

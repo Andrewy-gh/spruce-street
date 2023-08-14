@@ -1,4 +1,4 @@
-export default function FooterDesktop() {
+export default function Footer() {
   return (
     <div className="flex flex-wrap justify-between items-center py-8 px-space-l bg-dark text-light">
       <div className="grid grid-cols-3 gap-4">
