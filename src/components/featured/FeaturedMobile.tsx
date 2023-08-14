@@ -1,6 +1,6 @@
-import featured1 from '../../assets/featured-1.webp';
-import featured2 from '../../assets/featured-2.webp';
-import featured3 from '../../assets/featured-3.webp';
+import featured1 from "../../assets/featured-1.webp";
+import featured2 from "../../assets/featured-2.webp";
+import featured3 from "../../assets/featured-3.webp";
 
 export default function FeaturedMobile() {
   return (
@@ -9,7 +9,7 @@ export default function FeaturedMobile() {
         Featured Collections
       </h3>
 
-      <div className="lg:hidden relative flex items-center justify-center">
+      <div className="lg:hidden  flex items-center justify-center">
         <div className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
           <div className="w-[220px] inline-block cursor-pointer mr-4">
             <img src={featured1} alt="placeholder" className="aspect-[4/5]" />
