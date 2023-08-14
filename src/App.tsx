@@ -8,7 +8,6 @@ import styles from './Bestsellers.module.css';
 import NavBar from './components/navbar/index';
 import Featured from './components/featured';
 import Footer from './components/footer/index';
-
 export default function App() {
   return (
     <>
