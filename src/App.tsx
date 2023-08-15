@@ -1,4 +1,4 @@
-import plants480 from './assets/plants-480.mp4';
+import plantsgif from './assets/plants.gif';
 import monstera from './assets/monstera.webp';
 import rubberfig from './assets/rubberfig.webp';
 import snakeplant from './assets/snakeplant.webp';
@@ -49,9 +49,7 @@ export default function App() {
         {/* Video */}
         <section className=" w-container mx-auto my-space-l grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center gap-space-s">
           <div>
-            <video autoPlay loop>
-              <source src={plants480} type="video/mp4" />
-            </video>
+            <img src={plantsgif} alt="woman walking through a row of plants" />
           </div>
           <div className="text-primary-dark">
             <h3 className="text-step-3 font-accent">Lorem, ipsum.</h3>
