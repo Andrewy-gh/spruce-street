@@ -4,10 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: '#3f7e24', // green
-        'dark-secondary': '#7e9870', // green
+        primary: '#3f7e24', // green
+        'primary-secondary': '#7e9870', // primary green
+        'primary-dark': 'rgb(0 38 38 / 0.9)', // primaryest green
         light: '#f5fbf1', // white
         accent: '#9999cc', // light purple
+        'accent-dark': '#2a2a5e',
+      },
+      boxShadow: {
+        'button-accent': '-3px 4px 5px 0px rgba(42, 42, 94, 0.75)',
       },
       fontFamily: {
         accent: ['Playfair Display', 'ui-serif'],
