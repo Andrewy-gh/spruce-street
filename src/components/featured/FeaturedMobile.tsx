@@ -1,10 +1,10 @@
-import featured1 from "../../assets/featured-1.webp";
-import featured2 from "../../assets/featured-2.webp";
-import featured3 from "../../assets/featured-3.webp";
+import featured1 from '../../assets/featured-1.webp';
+import featured2 from '../../assets/featured-2.webp';
+import featured3 from '../../assets/featured-3.webp';
 
 export default function FeaturedMobile() {
   return (
-    <section className="lg:hidden w-container mx-auto my-space-l">
+    <section className="lg:hidden w-container mx-auto text-primary-dark my-space-l">
       <h3 className="text-step-3 font-medium font-accent mb-space-2xs">
         Featured Collections
       </h3>

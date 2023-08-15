@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-wrap justify-between items-center py-8 px-space-l bg-dark text-light">
+    <div className="flex flex-wrap justify-between items-center gap-space-l py-8 px-space-l bg-primary text-light">
       <div className="grid grid-cols-3 gap-4">
         <div>
           <h6 className="text-step--1 font-accent">Lorem, ipsum.</h6>

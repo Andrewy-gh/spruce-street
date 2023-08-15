@@ -1,13 +1,13 @@
-import { useState, useRef, useEffect } from "react";
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
-import Accordian from "./Accordian";
+import { useState, useRef, useEffect } from 'react';
+import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
+import Accordian from './Accordian';
 
 // <ChevronDownIcon className={open ? 'rotate-180 transform' : ''} />;
 
 const bodyItems = [
-  { id: 1, name: "Lorem" },
-  { id: 2, name: "Lorem" },
-  { id: 3, name: "Lorem" },
+  { id: 1, name: 'Lorem' },
+  { id: 2, name: 'Lorem' },
+  { id: 3, name: 'Lorem' },
 ];
 
 export default function MenuMobile() {
@@ -17,18 +17,18 @@ export default function MenuMobile() {
   useEffect(() => {
     // Function to handle click events outside the menu
     const handleClickOutside = (event: MouseEvent) => {
-      console.log("clicking...");
+      console.log('clicking...');
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setOpen(false);
       }
     };
 
     // Add the event listener
-    window.addEventListener("click", handleClickOutside);
+    window.addEventListener('click', handleClickOutside);
 
     // Clean up the event listener when the component is unmounted
     return () => {
-      window.removeEventListener("click", handleClickOutside);
+      window.removeEventListener('click', handleClickOutside);
     };
   }, []);
 
@@ -51,8 +51,8 @@ export default function MenuMobile() {
       {/* Main Menu */}
       <div
         ref={menuRef}
-        className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col items-center gap-[15vw] text-step-0 tracking-[1px] overflow-hidden origin-left duration-500 ${
-          open ? "w-[50vw]" : ""
+        className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
+          open ? 'w-[50vw]' : ''
         }`}
       >
         {/* Close Button */}
@@ -64,13 +64,13 @@ export default function MenuMobile() {
         </div>
         <ul className="w-full px-4">
           <li className="mb-1.5">
-            <Accordian header={"Plants"} body={bodyItems} />
+            <Accordian header={'Plants'} body={bodyItems} />
           </li>
           <li className="mb-1.5">
-            <Accordian header={"Tools"} body={bodyItems} />
+            <Accordian header={'Tools'} body={bodyItems} />
           </li>
           <li className="mb-1.5">
-            <Accordian header={"Care"} body={bodyItems} />
+            <Accordian header={'Care'} body={bodyItems} />
           </li>
         </ul>
       </div>

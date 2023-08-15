@@ -13,7 +13,7 @@ const bodyItems = [
 
 export default function NavBarDesktop() {
   return (
-    <div className="hidden lg:grid grid-cols-3 bg-dark-secondary py-4 px-space-l items-center justify-center">
+    <div className="hidden lg:grid grid-cols-3 bg-primary-secondary py-4 px-space-l items-center justify-center">
       <div className="align-self-center justify-self-start font-accent text-light text-step-1 font-medium">
         Spruce Street
       </div>

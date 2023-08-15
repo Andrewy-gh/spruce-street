@@ -29,22 +29,6 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-button {
-  box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
-  -webkit-box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
-  -moz-box-shadow: -3px 4px 5px 0px rgba(42, 42, 94, 0.75);
-}
-
-button:hover {
-  background-color: #2a2a5e;
-}
-
-input {
-  box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
-  -webkit-box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
-  -moz-box-shadow: -3px 4px 5px 0px rgba(33, 32, 22, 0.75);
-}
-
 input:focus {
   outline: solid #9999cc;
 }

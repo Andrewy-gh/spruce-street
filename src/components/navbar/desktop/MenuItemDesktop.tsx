@@ -38,7 +38,7 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
       </div>
       {/* Body */}
       <div
-        className={`absolute pt-2 bg-dark-secondary min-w-[2rem] z-10 ${
+        className={`absolute pt-2 bg-primary-secondary min-w-[2rem] z-10 ${
           open ? 'block' : 'hidden'
         }`}
       >

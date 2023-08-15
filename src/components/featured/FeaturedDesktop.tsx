@@ -4,7 +4,7 @@ import featured3 from '../../assets/featured-3.webp';
 
 export default function FeaturedDesktop() {
   return (
-    <section className="hidden lg:block w-container mx-auto my-space-l">
+    <section className="hidden lg:block w-container mx-auto text-primary-dark my-space-l">
       <h3 className="text-step-3 font-medium font-accent mb-space-2xs">
         Featured Collections
       </h3>
