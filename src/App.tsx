@@ -48,8 +48,20 @@ export default function App() {
 
         {/* Video */}
         <section className=" w-container mx-auto my-space-l grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center gap-space-s">
-          <div>
-            <img src={plantsgif} alt="woman walking through a row of plants" />
+          <div style={{ padding: '56.34% 0 0 0', position: 'relative' }}>
+            <iframe
+              src="https://player.vimeo.com/video/854529820?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+              }}
+              title="plants-480"
+            ></iframe>
           </div>
           <div className="text-primary-dark">
             <h3 className="text-step-3 font-accent">Lorem, ipsum.</h3>
