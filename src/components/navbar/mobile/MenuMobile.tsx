@@ -2,8 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import Accordian from './Accordian';
 
-// <ChevronDownIcon className={open ? 'rotate-180 transform' : ''} />;
-
 const bodyItems = [
   { id: 1, name: 'Lorem' },
   { id: 2, name: 'Lorem' },
@@ -12,12 +10,10 @@ const bodyItems = [
 
 export default function MenuMobile() {
   const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null); // Specify the type
-
+  const menuRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     // Function to handle click events outside the menu
     const handleClickOutside = (event: MouseEvent) => {
-      console.log('clicking...');
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setOpen(false);
       }
@@ -52,7 +48,7 @@ export default function MenuMobile() {
       <div
         ref={menuRef}
         className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
-          open ? 'w-[50vw]' : ''
+          open ? 'w-[70vw]' : ''
         }`}
       >
         {/* Close Button */}
@@ -63,13 +59,13 @@ export default function MenuMobile() {
           />
         </div>
         <ul className="w-full px-4">
-          <li className="mb-1.5">
+          <li className="mb-space-s">
             <Accordian header={'Plants'} body={bodyItems} />
           </li>
-          <li className="mb-1.5">
+          <li className="mb-space-s">
             <Accordian header={'Tools'} body={bodyItems} />
           </li>
-          <li className="mb-1.5">
+          <li className="mb-space-s">
             <Accordian header={'Care'} body={bodyItems} />
           </li>
         </ul>

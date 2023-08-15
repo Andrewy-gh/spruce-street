@@ -30,9 +30,9 @@ export default function Accordion({ header, body }: AccordionProps) {
         </div>
       </div>
       <div className={`overflow-hidden ${expand ? '' : 'max-h-0'}`}>
-        <ul className="mb-4">
+        <ul>
           {body.map((item) => (
-            <li key={item.id} className="font-body text-step-0">
+            <li key={item.id} className="font-body text-step-0 m-space-s">
               {item.name}
             </li>
           ))}
