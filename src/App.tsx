@@ -1,4 +1,3 @@
-import plantsgif from './assets/plants.gif';
 import monstera from './assets/monstera.webp';
 import rubberfig from './assets/rubberfig.webp';
 import snakeplant from './assets/snakeplant.webp';
