@@ -22,8 +22,6 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
       <div
         className="font-accent text-step-0 text-light px-8"
         onClick={toggleOpen}
-        onMouseEnter={toggleOpen}
-        onMouseLeave={toggleOpen}
       >
         <div className="flex">
           {header}

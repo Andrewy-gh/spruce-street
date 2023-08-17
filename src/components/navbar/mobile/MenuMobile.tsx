@@ -8,7 +8,7 @@ const bodyItems = [
   { id: 3, name: 'Lorem' },
 ];
 
-export default function MenuMobile() {
+export default function MenuMobile({ navigation }) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -59,7 +59,12 @@ export default function MenuMobile() {
           />
         </div>
         <ul className="w-full px-4">
-          <li className="mb-space-s">
+          {navigation.map(({ id, section, links }) => (
+            <li key={id} className="mb-space-s">
+              <Accordian header={section} body={links} />
+            </li>
+          ))}
+          {/* <li className="mb-space-s">
             <Accordian header={'Plants'} body={bodyItems} />
           </li>
           <li className="mb-space-s">
@@ -67,7 +72,7 @@ export default function MenuMobile() {
           </li>
           <li className="mb-space-s">
             <Accordian header={'Care'} body={bodyItems} />
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

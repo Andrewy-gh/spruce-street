@@ -1,10 +1,10 @@
-import { footer, Link, FooterSection } from '../data';
+import { footer, Link, Section } from '../data';
 
 export default function Footer() {
   return (
     <div className="flex flex-wrap justify-between items-center gap-space-xl pt-space-l pb-space-2xl px-space-l bg-primary text-light">
       <div className="grid grid-cols-3 gap-4">
-        {footer.map(({ id, section, links }: FooterSection) => (
+        {footer.map(({ id, section, links }: Section) => (
           <div key={id}>
             <h6 className="text-step-0 font-accent mb-space-xs">{section}</h6>
             {links.map(({ id, name, path }: Link) => (

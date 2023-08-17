@@ -22,8 +22,8 @@ export default function App() {
               <div className="text-light self-center justify-self-start">
                 <h1 className="font-accent text-step-5  font-bold ">Welcome</h1>
                 <p className="font-body text-step-0  mb-space-xs">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Itaque, quod?
+                  Creating Serene Spaces: Find Your Perfect Plant Companions
+                  with Us
                 </p>
                 <button className="font-accent py-space-2xs px-space-m rounded-md bg-accent  shadow-button-accent hover:bg-accent-dark">
                   Shop now
@@ -39,9 +39,8 @@ export default function App() {
         {/* Call to action */}
         <section className="w-container mx-auto my-space-2xl">
           <h4 className="text-step-2 font-medium font-accent text-primary text-center p-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem eum
-            illo quae non esse tempora impedit perspiciatis animi corporis
-            corrupti?
+            Start Your Plant Journey Today: Cultivate Green Inspiration with Us!
+            Shop now and Enjoy 20% Off Your First Purchase!"
           </h4>
         </section>
 
@@ -63,11 +62,13 @@ export default function App() {
             ></iframe>
           </div>
           <div className="text-primary-dark">
-            <h3 className="text-step-3 font-accent">Lorem, ipsum.</h3>
+            <h3 className="text-step-3 font-accent">
+              Drop By Our Nearby Haven.
+            </h3>
             <p className="text-step--1 font-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              aliquid fuga quos asperiores exercitationem obcaecati dolorem
-              mollitia ad tempora voluptatibus.
+              Our store is your urban oasis. Swing by for plant browsing,
+              potting sessions, curbside pickup, hands-on workshops, and more
+              green goodness.
             </p>
           </div>
         </section>
@@ -113,11 +114,11 @@ export default function App() {
           <div className="basis-full lg:basis-[40%] grid place-items-start lg:place-items-center pt-space-s lg:pl-space-s lg:pt-0">
             <div>
               <h3 className="text-step-3 text-primary-dark font-accent">
-                Lorem, ipsum.
+                Feed your plant passion!
               </h3>
               <p className="text-step--1 text-primary-dark font-body mb-space-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae, assumenda? Pariatur aliquam est aut cum!
+                Get nurturing plant care insights, exclusive deals, and first
+                dibs on plant-filled events. We promise no inbox overload.
               </p>
               <form action="">
                 <input
@@ -126,7 +127,7 @@ export default function App() {
                   placeholder="Enter your email"
                 />
                 <button className="font-accent py-space-2xs px-space-m mt-space-2xs rounded-md bg-accent text-light shadow-button-accent hover:bg-accent-dark">
-                  Sign up!
+                  Subscribe!
                 </button>
               </form>
             </div>
