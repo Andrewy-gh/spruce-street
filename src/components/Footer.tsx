@@ -1,53 +1,21 @@
+import { footer, Link, FooterSection } from '../data';
+
 export default function Footer() {
   return (
-    <div className="flex flex-wrap justify-between items-center gap-space-l py-8 px-space-l bg-primary text-light">
+    <div className="flex flex-wrap justify-between items-center gap-space-xl pt-space-l pb-space-2xl px-space-l bg-primary text-light">
       <div className="grid grid-cols-3 gap-4">
-        <div>
-          <h6 className="text-step--1 font-accent">Lorem, ipsum.</h6>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-        </div>
-        <div>
-          <h6 className="text-step--1 font-accent">Lorem, ipsum.</h6>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-        </div>
-        <div>
-          <h6 className="text-step--1 font-accent">Lorem, ipsum.</h6>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-          <a href="#" className="font-body">
-            <p className="text-step--2">Lorem, ipsum.</p>
-          </a>
-        </div>
+        {footer.map(({ id, section, links }: FooterSection) => (
+          <div key={id}>
+            <h6 className="text-step-0 font-accent mb-space-xs">{section}</h6>
+            {links.map(({ id, name, path }: Link) => (
+              <a key={id} href={path} className="font-body">
+                <p className="text-step--1 mb-1">{name}</p>
+              </a>
+            ))}
+          </div>
+        ))}
       </div>
+
       <div>
         <h6 className="text-step--1 font-accent mb-space-2xs">Follow Us:</h6>
         <div className="flex gap-space-2xs">
