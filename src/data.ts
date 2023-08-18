@@ -1,14 +1,4 @@
-export interface Link {
-  id: string;
-  name: string;
-  path: string;
-}
-
-export interface Section {
-  id: string;
-  section: string;
-  links: Link[];
-}
+import { Section } from './types';
 
 export const navigation: Section[] = [
   {
@@ -56,7 +46,7 @@ export const navigation: Section[] = [
         path: '/large',
       },
       {
-        id: 'nav-section-3-link-2',
+        id: 'nav-section-3-link-3',
         name: 'Plant Stands',
         path: '/plant-stands',
       },
@@ -100,7 +90,7 @@ export const footer: Section[] = [
         name: 'Plant Care Library',
         path: '/library',
       },
-      { id: 'footer-section-3-link-2', name: 'Blog', path: '/blog' },
+      { id: 'footer-section-3-link-3', name: 'Blog', path: '/blog' },
     ],
   },
 ];

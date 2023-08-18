@@ -1,14 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import Accordian from './Accordian';
+import { ReactNode } from 'react';
 
-const bodyItems = [
-  { id: 1, name: 'Lorem' },
-  { id: 2, name: 'Lorem' },
-  { id: 3, name: 'Lorem' },
-];
+interface MenuMobileProps {
+  children: ReactNode;
+}
 
-export default function MenuMobile({ navigation }) {
+export default function MenuMobile({ children }: MenuMobileProps) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -33,6 +31,12 @@ export default function MenuMobile({ navigation }) {
   ) => {
     event.stopPropagation(); // Prevent event propagation
     setOpen(true);
+    document.body.classList.toggle('overflow-hidden');
+  };
+
+  const handleCloseIconClick = () => {
+    setOpen(false);
+    document.body.classList.toggle('overflow-hidden');
   };
 
   return (
@@ -47,33 +51,18 @@ export default function MenuMobile({ navigation }) {
       {/* Main Menu */}
       <div
         ref={menuRef}
-        className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
+        className={`fixed bg-[#002626]/90 w-0 h-screen overflow-y-scroll text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
           open ? 'w-[70vw]' : ''
         }`}
       >
         {/* Close Button */}
-        <div className="self-start px-2 py-4" onClick={() => setOpen(false)}>
+        <div className="self-start px-2 py-4" onClick={handleCloseIconClick}>
           <XMarkIcon
             className="block h-9 w-9 text-light cursor-pointer"
             aria-hidden="true"
           />
         </div>
-        <ul className="w-full px-4">
-          {navigation.map(({ id, section, links }) => (
-            <li key={id} className="mb-space-s">
-              <Accordian header={section} body={links} />
-            </li>
-          ))}
-          {/* <li className="mb-space-s">
-            <Accordian header={'Plants'} body={bodyItems} />
-          </li>
-          <li className="mb-space-s">
-            <Accordian header={'Tools'} body={bodyItems} />
-          </li>
-          <li className="mb-space-s">
-            <Accordian header={'Care'} body={bodyItems} />
-          </li> */}
-        </ul>
+        <ul className="w-full px-4">{children}</ul>
       </div>
     </>
   );
