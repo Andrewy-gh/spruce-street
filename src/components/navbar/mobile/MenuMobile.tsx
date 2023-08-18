@@ -1,14 +1,13 @@
-import { useState, useRef, useEffect } from 'react';
-import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import Accordian from './Accordian';
+import { useState, useRef, useEffect } from "react";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import Accordian from "./Accordian";
+import { Section } from "../../../types";
 
-const bodyItems = [
-  { id: 1, name: 'Lorem' },
-  { id: 2, name: 'Lorem' },
-  { id: 3, name: 'Lorem' },
-];
+interface MenuMobileProps {
+  navigation: Section[];
+}
 
-export default function MenuMobile({ navigation }) {
+export default function MenuMobile({ navigation }: MenuMobileProps) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -20,11 +19,11 @@ export default function MenuMobile({ navigation }) {
     };
 
     // Add the event listener
-    window.addEventListener('click', handleClickOutside);
+    window.addEventListener("click", handleClickOutside);
 
     // Clean up the event listener when the component is unmounted
     return () => {
-      window.removeEventListener('click', handleClickOutside);
+      window.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -33,6 +32,7 @@ export default function MenuMobile({ navigation }) {
   ) => {
     event.stopPropagation(); // Prevent event propagation
     setOpen(true);
+    document.body.classList.toggle("overflow-hidden");
   };
 
   return (
@@ -47,8 +47,8 @@ export default function MenuMobile({ navigation }) {
       {/* Main Menu */}
       <div
         ref={menuRef}
-        className={`fixed bg-[#002626]/90 w-0 h-[100vh] text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
-          open ? 'w-[70vw]' : ''
+        className={`fixed bg-[#002626]/90 w-0 h-screen overflow-y-scroll text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
+          open ? "w-[70vw]" : ""
         }`}
       >
         {/* Close Button */}

@@ -1,5 +1,9 @@
-import MenuMobile from './MenuMobile';
-export default function NavBarMobile({ navigation }) {
+import MenuMobile from "./MenuMobile";
+import { Section } from "../../../types";
+interface NavBarMobileProps {
+  navigation: Section[];
+}
+export default function NavBarMobile({ navigation }: NavBarMobileProps) {
   return (
     <div className="lg:hidden flex justify-between bg-primary-secondary">
       <MenuMobile navigation={navigation} />

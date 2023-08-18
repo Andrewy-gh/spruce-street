@@ -1,12 +1,12 @@
-import monstera from './assets/monstera.webp';
-import rubberfig from './assets/rubberfig.webp';
-import snakeplant from './assets/snakeplant.webp';
-import rattlesnake from './assets/rattlesnake.webp';
-import signup from './assets/signup.webp';
-import NavBar from './components/navbar/index';
-import Featured from './components/featured';
-import Footer from './components/Footer';
-import styles from './Bestsellers.module.css';
+import monstera from "./assets/monstera.webp";
+import rubberfig from "./assets/rubberfig.webp";
+import snakeplant from "./assets/snakeplant.webp";
+import rattlesnake from "./assets/rattlesnake.webp";
+import signup from "./assets/signup.webp";
+import NavBar from "./components/navbar/index";
+import Featured from "./components/featured";
+import Footer from "./components/Footer";
+import styles from "./Bestsellers.module.css";
 export default function App() {
   return (
     <>
@@ -46,17 +46,18 @@ export default function App() {
 
         {/* Video */}
         <section className=" w-container mx-auto my-space-l grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center gap-space-s">
-          <div style={{ padding: '56.34% 0 0 0', position: 'relative' }}>
+          <div style={{ padding: "56.34% 0 0 0", position: "relative" }}>
             <iframe
               src="https://player.vimeo.com/video/854529820?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              loading="lazy"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               style={{
-                position: 'absolute',
-                top: '0',
-                left: '0',
-                width: '100%',
-                height: '100%',
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
               }}
               title="plants-480"
             ></iframe>
