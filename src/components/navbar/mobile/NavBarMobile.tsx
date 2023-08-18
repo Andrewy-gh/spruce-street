@@ -1,5 +1,5 @@
-import MenuMobile from "./MenuMobile";
-import { Section } from "../../../types";
+import MenuMobile from './MenuMobile';
+import { Section } from '../../../types';
 interface NavBarMobileProps {
   navigation: Section[];
 }

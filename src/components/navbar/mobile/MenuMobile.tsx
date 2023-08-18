@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
-import Accordian from "./Accordian";
-import { Section } from "../../../types";
+import { useState, useRef, useEffect } from 'react';
+import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
+import Accordian from './Accordian';
+import { Section } from '../../../types';
 
 interface MenuMobileProps {
   navigation: Section[];
@@ -19,11 +19,11 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
     };
 
     // Add the event listener
-    window.addEventListener("click", handleClickOutside);
+    window.addEventListener('click', handleClickOutside);
 
     // Clean up the event listener when the component is unmounted
     return () => {
-      window.removeEventListener("click", handleClickOutside);
+      window.removeEventListener('click', handleClickOutside);
     };
   }, []);
 
@@ -32,7 +32,7 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
   ) => {
     event.stopPropagation(); // Prevent event propagation
     setOpen(true);
-    document.body.classList.toggle("overflow-hidden");
+    document.body.classList.toggle('overflow-hidden');
   };
 
   return (
@@ -48,7 +48,7 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
       <div
         ref={menuRef}
         className={`fixed bg-[#002626]/90 w-0 h-screen overflow-y-scroll text-white flex flex-col items-center gap-[15vw] text-step-0 overflow-hidden origin-left duration-500 ${
-          open ? "w-[70vw]" : ""
+          open ? 'w-[70vw]' : ''
         }`}
       >
         {/* Close Button */}
@@ -64,15 +64,6 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
               <Accordian header={section} body={links} />
             </li>
           ))}
-          {/* <li className="mb-space-s">
-            <Accordian header={'Plants'} body={bodyItems} />
-          </li>
-          <li className="mb-space-s">
-            <Accordian header={'Tools'} body={bodyItems} />
-          </li>
-          <li className="mb-space-s">
-            <Accordian header={'Care'} body={bodyItems} />
-          </li> */}
         </ul>
       </div>
     </>

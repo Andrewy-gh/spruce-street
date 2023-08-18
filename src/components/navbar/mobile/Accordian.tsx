@@ -1,14 +1,9 @@
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-
-interface Item {
-  id: number;
-  name: string;
-}
-
+import { Link } from '../../../types';
 interface AccordionProps {
   header: string;
-  body: Item[];
+  body: Link[];
 }
 
 export default function Accordion({ header, body }: AccordionProps) {
@@ -31,9 +26,9 @@ export default function Accordion({ header, body }: AccordionProps) {
       </div>
       <div className={`overflow-hidden ${expand ? '' : 'max-h-0'}`}>
         <ul>
-          {body.map((item) => (
-            <li key={item.id} className="font-body text-step-0 m-space-s">
-              {item.name}
+          {body.map(({ id, name, path }) => (
+            <li key={id} className="font-body text-step-0 m-space-s">
+              <a href={path}>{name}</a>
             </li>
           ))}
         </ul>

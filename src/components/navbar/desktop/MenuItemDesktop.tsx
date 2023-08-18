@@ -1,14 +1,10 @@
-import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
-interface Item {
-  id: number;
-  name: string;
-}
+import { useState } from 'react';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { Link } from '../../../types';
 
 interface MenuItemProps {
   header: string;
-  body: Item[];
+  body: Link[];
 }
 
 export default function MenuItemDesktop({ header, body }: MenuItemProps) {
@@ -28,7 +24,7 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
           <div className="flex self-center ml-1.5 mt-1.5">
             <ChevronDownIcon
               className={`h-4 w-4 text-light cursor-pointer ${
-                open ? "rotate-180 transform" : ""
+                open ? 'rotate-180 transform' : ''
               }`}
             />
           </div>
@@ -37,14 +33,14 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
       {/* Body */}
       <div
         className={`absolute pt-2 bg-primary-secondary min-w-[2rem] z-10 ${
-          open ? "block" : "hidden"
+          open ? 'block' : 'hidden'
         }`}
       >
         <ul>
-          {body.map((item) => (
-            <li key={item.id} className="pt-2 px-8 pb-4">
-              <a href="#" className="font-body text-light text-step--1">
-                {item.name}
+          {body.map(({ id, name, path }) => (
+            <li key={id} className="pt-2 px-8 pb-4">
+              <a href={path} className="font-body text-light text-step--1">
+                {name}
               </a>
             </li>
           ))}
