@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import Accordian from './Accordian';
-import { Section } from '../../../types';
+import { ReactNode } from 'react';
 
 interface MenuMobileProps {
-  navigation: Section[];
+  children: ReactNode;
 }
 
-export default function MenuMobile({ navigation }: MenuMobileProps) {
+export default function MenuMobile({ children }: MenuMobileProps) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -35,6 +34,11 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
     document.body.classList.toggle('overflow-hidden');
   };
 
+  const handleCloseIconClick = () => {
+    setOpen(false);
+    document.body.classList.toggle('overflow-hidden');
+  };
+
   return (
     <>
       <div className="cursor-pointer px-2 py-4">
@@ -52,19 +56,13 @@ export default function MenuMobile({ navigation }: MenuMobileProps) {
         }`}
       >
         {/* Close Button */}
-        <div className="self-start px-2 py-4" onClick={() => setOpen(false)}>
+        <div className="self-start px-2 py-4" onClick={handleCloseIconClick}>
           <XMarkIcon
             className="block h-9 w-9 text-light cursor-pointer"
             aria-hidden="true"
           />
         </div>
-        <ul className="w-full px-4">
-          {navigation.map(({ id, section, links }) => (
-            <li key={id} className="mb-space-s">
-              <Accordian header={section} body={links} />
-            </li>
-          ))}
-        </ul>
+        <ul className="w-full px-4">{children}</ul>
       </div>
     </>
   );
