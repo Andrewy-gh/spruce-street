@@ -1,4 +1,5 @@
-import { footer, Link, Section } from '../data';
+import { footer } from '../data';
+import { Link, Section } from '../types';
 
 export default function Footer() {
   return (
