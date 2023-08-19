@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
@@ -12,7 +13,7 @@ export default function NavBarDesktop({ children }: NavBarDesktopProps) {
   return (
     <div className="hidden lg:flex bg-primary-secondary py-4 px-space-l items-center justify-between">
       <div className="align-self-center justify-self-start font-accent text-light text-step-1 font-medium">
-        Spruce Street
+        <Link to="/">Spruce Street</Link>
       </div>
       <div className="align-self-center justify-self-center flex">
         {children}

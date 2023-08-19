@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { Link } from '../../../types';
+import { Route } from '../../../types';
 
 interface MenuItemProps {
   header: string;
-  body: Link[];
+  body: Route[];
 }
 
 export default function MenuItemDesktop({ header, body }: MenuItemProps) {
@@ -39,9 +40,9 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
         <ul>
           {body.map(({ id, name, path }) => (
             <li key={id} className="pt-2 px-8 pb-4">
-              <a href={path} className="font-body text-light text-step--1">
+              <Link to={path} className="font-body text-light text-step--1">
                 {name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

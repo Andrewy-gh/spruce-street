@@ -1,6 +1,6 @@
 import NavBarDesktop from './desktop/NavBarDesktop';
 import NavBarMobile from './mobile/NavBarMobile';
-import { navigation } from '../../data';
+import { navigation } from '../../data/routes';
 import MenuMobile from './mobile/MenuMobile';
 import Accordion from './mobile/Accordion';
 import MenuItemDesktop from './desktop/MenuItemDesktop';

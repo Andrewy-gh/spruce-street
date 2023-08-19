@@ -1,4 +1,4 @@
-export interface Link {
+export interface Route {
   id: string;
   name: string;
   path: string;
@@ -7,5 +7,5 @@ export interface Link {
 export interface Section {
   id: string;
   section: string;
-  links: Link[];
+  links: Route[];
 }

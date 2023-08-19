@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { Link } from '../../../types';
+import { Route } from '../../../types';
 interface AccordionProps {
   header: string;
-  body: Link[];
+  body: Route[];
 }
 
 export default function Accordion({ header, body }: AccordionProps) {
@@ -28,7 +29,7 @@ export default function Accordion({ header, body }: AccordionProps) {
         <ul>
           {body.map(({ id, name, path }) => (
             <li key={id} className="font-body text-step-0 m-space-s">
-              <a href={path}>{name}</a>
+              <Link to={path}>{name}</Link>
             </li>
           ))}
         </ul>
