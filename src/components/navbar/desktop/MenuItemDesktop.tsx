@@ -20,11 +20,11 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
         className="font-accent text-step-0 text-light px-8"
         onClick={toggleOpen}
       >
-        <div className="flex">
+        <div className="flex cursor-pointer">
           {header}
           <div className="flex self-center ml-1.5 mt-1.5">
             <ChevronDownIcon
-              className={`h-4 w-4 text-light cursor-pointer ${
+              className={`h-4 w-4 text-light ${
                 open ? 'rotate-180 transform' : ''
               }`}
             />
@@ -39,7 +39,7 @@ export default function MenuItemDesktop({ header, body }: MenuItemProps) {
       >
         <ul>
           {body.map(({ id, name, path }) => (
-            <li key={id} className="pt-2 px-8 pb-4">
+            <li key={id} className="pt-2 px-8 pb-4" onClick={toggleOpen}>
               <Link to={path} className="font-body text-light text-step--1">
                 {name}
               </Link>

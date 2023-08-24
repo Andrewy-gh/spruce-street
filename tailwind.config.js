@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: '#3f7e24', // green
         'primary-secondary': '#7e9870', // primary green
-        'primary-dark': 'rgb(0 38 38 / 0.9)', // primaryest green
+        'primary-dark': 'rgb(0 38 38 / 0.9)', // darkest green
         light: '#f5fbf1', // white
         accent: '#9999cc', // light purple
         'accent-dark': '#2a2a5e',
