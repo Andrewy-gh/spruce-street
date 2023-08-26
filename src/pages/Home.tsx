@@ -31,15 +31,15 @@ export default function Home() {
       {/* Call to action */}
       <section className="w-container mx-auto my-space-2xl">
         <h4 className="text-step-2 font-medium font-accent text-primary text-center p-8">
-          Start Your Plant Journey Today: Cultivate Green Inspiration with Us!
-          Shop now and Enjoy 20% Off Your First Purchase!"
+          Start Your Plant Journey Today! Shop now and Enjoy 20% Off Your First
+          Purchase!
         </h4>
       </section>
 
       {/* Video */}
       <section className=" w-container mx-auto my-space-l grid grid-cols-1 lg:grid-cols-[60%_40%] lg:items-center gap-space-s">
         <div>
-          <video width="100%" height="100%" autoPlay loop controls>
+          <video width="100%" height="100%" loop controls>
             <source src={plants480} type="video/mp4" />
           </video>
         </div>

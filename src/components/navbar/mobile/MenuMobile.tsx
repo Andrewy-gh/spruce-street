@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
-import { ReactNode } from 'react';
 
 interface MenuMobileProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export default function MenuMobile({ children }: MenuMobileProps) {

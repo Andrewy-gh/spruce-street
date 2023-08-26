@@ -1,6 +1,5 @@
-import featured1 from '../../assets/featured-1.webp';
-import featured2 from '../../assets/featured-2.webp';
-import featured3 from '../../assets/featured-3.webp';
+import { Link } from 'react-router-dom';
+import { featured } from '../../data/images';
 
 export default function FeaturedDesktop() {
   return (
@@ -9,22 +8,18 @@ export default function FeaturedDesktop() {
         Featured Collections
       </h3>
       <div className="grid grid-cols-4 auto-rows-min gap-4">
-        <div className="mx-auto">
-          <img src={featured1} alt="placeholder" className="aspect-[4/5]" />
-          <p className="text-step-0 font-body">Succulents</p>
-        </div>
-        <div className="mx-auto">
-          <img src={featured2} alt="placeholder" className="aspect-[4/5]" />
-          <p className="text-step-0 font-body">Planters</p>
-        </div>
-        <div className="mx-auto">
-          <img src={featured3} alt="placeholder" className="aspect-[4/5]" />
-          <p className="text-step-0 font-body">Placeholder</p>
-        </div>
-        <div className="mx-auto">
-          <img src={featured3} alt="placeholder" className="aspect-[4/5]" />
-          <p className="text-step-0 font-body">Placeholder</p>
-        </div>
+        {featured.map((item) => (
+          <div key={item.id} className="mx-auto">
+            <Link to={item.path}>
+              <img
+                src={item.src}
+                alt={item.title}
+                className="aspect-[4/5] mb-space-2xs"
+              />
+              <p className="text-step-1 font-body text-center">{item.title}</p>
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import { Section } from '../types';
-
 export const navigation: Section[] = [
   {
     id: 'nav-section-1',

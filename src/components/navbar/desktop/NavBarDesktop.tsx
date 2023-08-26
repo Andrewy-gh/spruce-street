@@ -4,17 +4,23 @@ import {
   ShoppingBagIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import { ReactNode } from 'react';
+
+import logo from '../../../assets/logo.svg';
 
 interface NavBarDesktopProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 export default function NavBarDesktop({ children }: NavBarDesktopProps) {
   return (
     <div className="hidden lg:flex bg-primary-secondary py-4 px-space-l items-center justify-between">
-      <div className="align-self-center justify-self-start font-accent text-light text-step-1 font-medium">
-        <Link to="/">Spruce Street</Link>
-      </div>
+      <Link to="/">
+        <div className="flex items-center gap-1 align-self-center justify-self-start font-accent text-light text-step-1 font-medium">
+          <div className="mt-0.5">
+            <img src={logo} alt="spruce street logo" />
+          </div>
+          <div>Spruce Street</div>
+        </div>
+      </Link>
       <div className="align-self-center justify-self-center flex">
         {children}
       </div>
