@@ -4,7 +4,7 @@ Web page for a local plant store.
 
 **Link to project:** https://www.spruce-street.netlify.app
 
-![alt tag](/assets/readme-image.webp)
+![alt tag](/src/assets/readme-image.webp)
 
 ## How It's Made:
 
