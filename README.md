@@ -18,7 +18,7 @@ The project features a fluid type scale and fluid space scale, optimizing typogr
 
 1. Fork the repository
 
-2. In the project route directory. Enter these commands:
+2. In the project root directory. Enter these commands:
    `npm install` to install dependencies, and then
    `npm run dev` to start the local dev server
 
