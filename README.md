@@ -2,7 +2,7 @@
 
 Web page for a local plant store.
 
-**Link to project:** https://www.spruce-street.netlify.app
+**Link to project:** https://spruce-street.netlify.app
 
 ![alt tag](/src/assets/readme-image.webp)
 
