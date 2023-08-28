@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# Spruce Street
+Web page for a local plant store.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Link to project:** https://www.spruce-street.netlify.app
 
-Currently, two official plugins are available:
+## How It's Made:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech used:** React, TypeScript, Tailwind
 
-## Expanding the ESLint configuration
+## Optimizations
+The project features a fluid type scale and fluid space scale, optimizing typography and spacing according to viewport width. As the viewport expands, font sizes and spacing increase to maximize space utilization, while they decrease as the viewport narrows, ensuring readability and aesthetics across diverse devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How to Run:
 
-- Configure the top-level `parserOptions` property like this:
+1. Fork the repository
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. In the project route directory. Enter these commands:
+```npm install``` to install dependencies, and then
+```npm run dev``` to start the local dev server
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Once running, open your browser and navigate to [http://localhost:3000](http://localhost:3000)
+
+
